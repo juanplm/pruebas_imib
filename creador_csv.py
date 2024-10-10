@@ -52,13 +52,40 @@ df_diccs = pd.DataFrame.from_records(lista_dics)
 df_diccs.to_csv("csv_diccs.csv", index=False)
 
 
+
+
+# Obtencion genes usados en el modelo final 
+
+df_variants = pd.read_csv("dataset2_5pc.csv", sep="\t")
+
+genes_completos = list(df_variants.columns)
+genes_completos = genes_completos[1:]
+
+gene_names = []
+
+for gen in genes_completos:
+    gen_partido = gen.split("_")
+    gen_name = gen_partido[0].upper()
+    gene_names.append(gen_name)
+
+len(gene_names)
+
+gene_names = list(set(gene_names))
+
+len(gene_names)
+    
+for gen in gene_names:
+    print(gen, end=" ")
+
+
+
 # Anotacion con G:Profiler con HPO
 
 r = requests.post(
     url='https://biit.cs.ut.ee/gprofiler/api/gost/profile/',
     json={
         'organism':'hsapiens',
-        'query':["PDPR", "TTYH3", "EHMT1","ACAN","OAS3","SCNN1D","COL16A1","TEX36","BCHE"],
+        'query':gene_names,
         'sources':["HP"]
     }
     )
