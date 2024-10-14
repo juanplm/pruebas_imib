@@ -1,0 +1,391 @@
+---
+title: "rfe 6000 tbag convz"
+author: "Juan Pedro Lopez Marin"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(caret)
+library(randomForest)
+library(doParallel)
+library(dplyr)
+library(writexl)
+```
+
+```{r}
+#categoria_muestras = read.csv(file = "samples.csv", sep = "\t")
+#categoria_muestras
+```
+
+```{r}
+#variantes_5pc = read.csv2(file = "dataset2_5pc.csv", sep = "\t")
+#variantes_5pc$grupo = categoria_muestras$class
+#variantes_5pc = variantes_5pc[variantes_5pc$grupo != "neuro_muscular", ]
+#variantes_5pc$grupo = as.factor(variantes_5pc$grupo)
+#rownames(variantes_5pc) = variantes_5pc[,1]
+#variantes_5pc = variantes_5pc[,-1]
+
+
+#variantes_5pc = variantes_5pc %>%
+#    select(last_col(), everything())
+
+```
+
+```{r}
+#resultado_rfe_tbag = readRDS("resultado_rfe_treebag_6000_sinneuro")
+```
+
+```{r}
+#genes_interes = data.frame(Genes = resultado_rfe_tbag$optVariables)
+```
+
+```{r}
+#write_xlsx(genes_interes, "genes_interes.xlsx")
+```
+
+```{r}
+
+setwd("C:/Users/Juanpepito/Escritorio/Trabajo/Oferta IMIB Angel/Pruebas clasificador local/")
+categoria_muestras = read.csv(file = "samples.csv", sep = "\t")
+
+variantes_1pc = read.csv2(file = "dataset2_5pc.csv",sep = "\t")
+variantes_1pc$grupo = categoria_muestras$class
+variantes_1pc = variantes_1pc[variantes_1pc$grupo != "neuro_muscular",]
+variantes_1pc$grupo = as.factor(variantes_1pc$grupo)
+rownames(variantes_1pc) = variantes_1pc[,1]
+variantes_1pc = variantes_1pc[,-1]
+
+variantes_1pc = variantes_1pc %>%
+  select(last_col(), everything())
+
+
+df_hpo = read.csv2("anotacion_hpo.csv", sep = ",")
+
+
+df_hpo_intersec = df_hpo[df_hpo$name == "Abnormality of the cardiovascular system",]
+df_hpo_genes = strsplit(df_hpo_intersec$intersections, split = ",")
+
+genes_hpo = c()
+
+for (i in 1:(length(df_hpo_genes[[1]]))){
+  gen = gsub("\\]","",gsub("\\'","",gsub("\\[", "", noquote(df_hpo_genes[[1]][i]))))
+  gen = gsub(" ","",gen)
+  genes_hpo = c(genes_hpo, gen)
+}
+
+genes_hpo = tolower(genes_hpo)
+
+variantes_def = c()
+
+for (i in 1:length(colnames(variantes_1pc[,-1]))){
+  for (y in genes_hpo){
+    if (y %in% strsplit(colnames(variantes_1pc[i]), split="_")[[1]][1]){
+      variantes_def = c(variantes_def,colnames(variantes_1pc[i]))
+    }
+  }
+  
+}
+
+variantes_def = unique(variantes_def)
+
+df_modificado = variantes_1pc[,variantes_def]
+
+df_modificado$grupo = categoria_muestras[categoria_muestras$class != "neuro_muscular",]$class
+df_modificado$grupo = as.factor(df_modificado$grupo)
+
+df_modificado = df_modificado %>%
+  select(last_col(), everything())
+
+
+set.seed(1234)
+
+particion = createDataPartition(df_modificado$grupo, p = .80, list = FALSE)
+
+train_prueba = df_modificado[particion, ]
+test_prueba = df_modificado[-particion, ]
+
+x_train_prueba = train_prueba[, -1]
+y_train_prueba = train_prueba[, 1]
+
+
+########################################################
+
+resultado_rfe_tbag = readRDS("resultado_rfe_rf_6000_pruebajp")
+
+df_modificado_reducido = df_modificado[,c(predictors(resultado_rfe_tbag),"grupo")]
+
+set.seed(1234)
+
+tbag_particion_2 = createDataPartition(df_modificado_reducido$grupo, p=0.80, list = FALSE)
+tbag_train_data = df_modificado_reducido[tbag_particion_2,]
+tbag_test_data = df_modificado_reducido[-tbag_particion_2,]
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Creación de modelo SVM con las mejores variables a priori
+
+```{r}
+set.seed(1234)
+
+control.cv.10 = trainControl(method = "repeatedcv", 
+                                  number = 5,
+                                  repeats = 1,
+                                  seeds = NULL, 
+                                  returnResamp = "final",
+                                  verboseIter = FALSE,
+                                  allowParallel = TRUE)
+```
+
+```{r}
+#tbag_variantes_5pc_reducido = variantes_5pc[,c(predictors(resultado_rfe_tbag),"grupo")]
+```
+
+```{r}
+#set.seed(1234)
+
+#tbag_particion_2 = createDataPartition(df_modificado_reducido$grupo, p=0.85, list = FALSE)
+#tbag_train_data = df_modificado_reducido[tbag_particion_2,]
+#tbag_test_data = df_modificado_reducido[-tbag_particion_2,]
+```
+
+```{r}
+set.seed(1234)
+
+tiempo = Sys.time()
+
+cl = makeCluster(4)
+registerDoParallel(cl)
+
+param.lineal = expand.grid(cost = c(0.001, 0.01, 0.1, 10, 100))
+
+tbag_training.svm.lineal = train(grupo ~ ., data = tbag_train_data,
+                      method = "svmLinear2",
+                      tuneGrid = param.lineal,
+                      metric = "Accuracy",
+                      preProcess = c("center", "scale"),
+                      trControl = control.cv.10)
+
+tiempo.fin = Sys.time() - tiempo
+print(tiempo.fin)
+
+stopCluster(cl)
+
+saveRDS(tbag_training.svm.lineal, "modelo_tbag_sinneuro_svml_var1p")
+
+```
+```{r}
+tbag_mejor_svml_6744 = tbag_training.svm.lineal$results[order(tbag_training.svm.lineal$results$Accuracy, decreasing = TRUE),][1,]["Accuracy"]
+```
+
+```{r}
+set.seed(1234)
+
+random.cv.10 = trainControl(method = "repeatedcv", 
+                                  number = 5,
+                                  repeats = 1,
+                                  seeds = NULL, 
+                                  returnResamp = "final",
+                                  search = "random",
+                                  verboseIter = FALSE,
+                                  allowParallel = TRUE)
+
+
+tiempo = Sys.time()
+
+cl = makeCluster(4)
+registerDoParallel(cl)
+
+#param.radial = expand.grid(C = c(0.1,1,10), sigma = c(0.03619703, 0.1, 1))
+
+tbag_training.svm.radial = train(grupo ~ ., data = tbag_train_data,
+                      method = "svmRadial",
+                      tuneLength = 6,
+                      metric = "Accuracy",
+                      preProcess = c("center", "scale"),
+                      trControl = random.cv.10)
+
+
+tiempo.fin = Sys.time() - tiempo
+print(tiempo.fin)
+
+
+stopCluster(cl)
+
+saveRDS(tbag_training.svm.radial, "modelo_tbag_sinneuro_svmr_var1p")
+```
+
+```{r}
+tbag_mejor_svmr_6744 = tbag_training.svm.radial$results[order(tbag_training.svm.radial$results$Accuracy, decreasing = TRUE),][1,]["Accuracy"]
+```
+
+```{r}
+set.seed(1234)
+
+tiempo = Sys.time()
+
+
+cl = makeCluster(4)
+registerDoParallel(cl)
+
+param.polinomial = expand.grid(C = c(0.01,0.1,0.5,1,2), degree = c(1,2,3), scale = c(0.01,0.1,1))
+
+tbag_training.svm.polinomial = train(grupo ~ ., data = tbag_train_data,
+                      method = "svmPoly",
+                      tuneGrid = param.polinomial,
+                      metric = "Accuracy",
+                      preProcess = c("center", "scale"),
+                      trControl = control.cv.10)
+
+
+tiempo.fin = Sys.time() - tiempo
+print(tiempo.fin)
+
+
+stopCluster(cl)
+
+saveRDS(tbag_training.svm.polinomial, "modelo_tbag_sinneuro_svmp_var1p")
+
+```
+
+```{r}
+tbag_mejor_svmp_6744 = tbag_training.svm.polinomial$results[order(tbag_training.svm.polinomial$results$Accuracy, decreasing = TRUE),][1,]["Accuracy"]
+```
+
+```{r}
+raiz_variables = round(sqrt(ncol(tbag_train_data)))
+
+tunegrid.rf.1 = expand.grid(mtry = c(raiz_variables-5,raiz_variables-2 ,raiz_variables,raiz_variables+3, raiz_variables+5, raiz_variables+10, raiz_variables+20),
+                            min.node.size = c(1,2,3),
+                            splitrule = c("gini","extratrees","hellinger"))
+
+
+
+set.seed(1234)
+
+tiempo = Sys.time()
+
+cl = makeCluster(4)
+registerDoParallel(cl)
+
+tbag_training.rf.1 = train(grupo ~ ., data = tbag_train_data,
+                      method = "ranger",
+                      tuneGrid = tunegrid.rf.1,
+                      metric = "Accuracy",
+                      preProcess = c("center", "scale"),
+                      trControl = control.cv.10)
+
+tiempo.fin = Sys.time() - tiempo
+print(tiempo.fin)
+
+stopCluster(cl)
+
+saveRDS(tbag_training.rf.1, "modelo_tbag_sinneuro_rf_var1p")
+
+```
+
+```{r}
+tbag_mejor_rf_6744 = tbag_training.rf.1$results[order(tbag_training.rf.1$results$Accuracy, decreasing = TRUE),][1,]["Accuracy"]
+```
+
+```{r}
+grid.diab.1 = expand.grid(laplace = 0:4,
+                       usekernel = c(TRUE,FALSE),
+                       adjust = 1:4)
+
+set.seed(1234)
+
+cl = makeCluster(4)
+registerDoParallel(cl)
+
+tbag_diab.models.1 <- train(grupo ~ ., data = tbag_train_data, 
+                 method = "naive_bayes",
+                 trControl = control.cv.10,
+                 preProcess = c("center", "scale"),
+                 tuneGrid=grid.diab.1)
+
+stopCluster(cl)
+
+saveRDS(tbag_diab.models.1, "modelo_tbag_sinneuro_nb_var1p")
+
+```
+
+```{r Resultado Modelos Diabetes}
+tbag_mejor_tbag_6744 = tbag_diab.models.1$results[order(tbag_diab.models.1$results$Accuracy, decreasing = TRUE),][1,]["Accuracy"]
+```
+
+```{r}
+tbag_resultados_rfe6744 = data.frame(Algoritmos = c("RF","SVML","SVMR","SVMP","NB"),
+                                     Máx.Accuracy = c(tbag_mejor_rf_6744$Accuracy, tbag_mejor_svml_6744$Accuracy, tbag_mejor_svmr_6744$Accuracy, tbag_mejor_svmp_6744$Accuracy, tbag_mejor_tbag_6744$Accuracy))
+tbag_resultados_rfe6744[order(tbag_resultados_rfe6744$Máx.Accuracy, decreasing = TRUE),]
+```
+
+### Test con RFE 6744
+
+```{r}
+set.seed(1234)
+
+tbag_6744_predict_rf = predict(tbag_training.rf.1, newdata = tbag_test_data)
+
+tbag_matriz.confusion.rf = confusionMatrix(tbag_6744_predict_rf, tbag_test_data$grupo)
+tbag_matriz.confusion.rf
+```
+```{r}
+set.seed(1234)
+
+tbag_6744_predict_svml = predict(tbag_training.svm.lineal, newdata = tbag_test_data)
+
+tbag_matriz.confusion.svml = confusionMatrix(tbag_6744_predict_svml, tbag_test_data$grupo)
+tbag_matriz.confusion.svml
+```
+```{r}
+set.seed(1234)
+
+tbag_6744_predict_svmr = predict(tbag_training.svm.radial, newdata = tbag_test_data)
+
+tbag_matriz.confusion.svmr = confusionMatrix(tbag_6744_predict_svmr, tbag_test_data$grupo)
+tbag_matriz.confusion.svmr
+```
+```{r}
+set.seed(1234)
+
+tbag_6744_predict_svmp = predict(tbag_training.svm.polinomial, newdata = tbag_test_data)
+
+tbag_matriz.confusion.svmp = confusionMatrix(tbag_6744_predict_svmp, tbag_test_data$grupo)
+tbag_matriz.confusion.svmp
+```
+
+```{r}
+set.seed(1234)
+
+tbag_6744_predict_nb = predict(tbag_diab.models.1, newdata = tbag_test_data)
+
+tbag_matriz.confusion.nb = confusionMatrix(tbag_6744_predict_nb, tbag_test_data$grupo)
+tbag_matriz.confusion.nb
+``` 
