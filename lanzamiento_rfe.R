@@ -19,22 +19,31 @@ variantes_1pc = variantes_1pc %>%
 
 df_hpo = read.csv2("anotacion_hpo.csv", sep = ",")
 
+# Mantengo únicamente la fila asociada al fenotipo de interés
+df_hpo_intersec = df_hpo[df_hpo$name == "Abnormality of the cardiovascular system",] 
 
-df_hpo_intersec = df_hpo[df_hpo$name == "Abnormality of the cardiovascular system",]
+# Separo los genes que hacen intersección
 df_hpo_genes = strsplit(df_hpo_intersec$intersections, split = ",")
 
+
+# Para tener los nombres de los genes en limpio, creo una nueva lista e introduzco los nombres de los genes ya limpios (sin comillas o simbolos)
 genes_hpo = c()
 
+
+# Para cada gen de la lista original, aplico un procesado mediante el cual obtengo finalmente el SYMBOL de cada gen unicamente
 for (i in 1:(length(df_hpo_genes[[1]]))){
   gen = gsub("\\]","",gsub("\\'","",gsub("\\[", "", noquote(df_hpo_genes[[1]][i]))))
   gen = gsub(" ","",gen)
   genes_hpo = c(genes_hpo, gen)
 }
 
+# Lo paso a minúsculas para mas tarde comparar con el nombre de las variantes de los dfs originales
 genes_hpo = tolower(genes_hpo)
 
 variantes_def = c()
 
+# Para cada nombre de variante del df original, me quedo con el symbol de la variante, y compruebo si dicho symbol coincide con alguno
+# de los nombres de genes que he extraído anteriormente del df de anotación de HPO. Los casos positivos, guardo el nombre de variante completo
 for (i in 1:length(colnames(variantes_1pc[,-1]))){
   for (y in genes_hpo){
     if (y %in% strsplit(colnames(variantes_1pc[i]), split="_")[[1]][1]){
@@ -44,8 +53,12 @@ for (i in 1:length(colnames(variantes_1pc[,-1]))){
   
 }
 
+
+# Elimino posibles duplicados de variantes
 variantes_def = unique(variantes_def)
 
+
+# Creo un nuevo df únicamente con las variantes de interés, las ubicadas en genes anotados en HPO con fenotipo = anormalidad del SCV
 df_modificado = variantes_1pc[,variantes_def]
 
 df_modificado$grupo = categoria_muestras[categoria_muestras$class != "neuro_muscular",]$class
