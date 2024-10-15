@@ -3,7 +3,6 @@ library(randomForest)
 library(doParallel)
 library(dplyr)
 
-setwd("C:/Users/Juanpepito/Escritorio/Trabajo/Oferta IMIB Angel/Pruebas clasificador local/")
 categoria_muestras = read.csv(file = "samples.csv", sep = "\t")
 
 variantes_1pc = read.csv2(file = "dataset2_5pc.csv",sep = "\t")
@@ -88,7 +87,7 @@ set.seed(1234)
 
 tiempo = Sys.time()
 
-cl = makeCluster(4)
+cl = makeCluster(20)
 registerDoParallel(cl)
 
 resultado_rfe_rf = rfe(x = x_train_prueba,
@@ -106,7 +105,7 @@ saveRDS(resultado_rfe_rf, file = "resultado_rfe_rf_6000_pruebajp")
 
 control_rfe_treebag = rfeControl(functions = treebagFuncs,
                                  method = "repeatedcv",
-                                 repeats = 1,
+                                 repeats = 2,
                                  number = 5,
                                  allowParallel = TRUE)
 
@@ -115,12 +114,12 @@ set.seed(1234)
 
 tiempo = Sys.time()
 
-cl = makeCluster(4)
+cl = makeCluster(20)
 registerDoParallel(cl)
 
 resultado_rfe_treebag = rfe(x = x_train_prueba,
                             y = y_train_prueba,
-                            sizes = c(300,400,500,550,600,700,800,900,1000),
+                            sizes = c(20,40,60,80,100,150,200,250,300,350,400,450,500,550,600,700,800,900,1000),
                             rfeControl = control_rfe_treebag)
 
 tiempo.fin = Sys.time() - tiempo
@@ -132,7 +131,7 @@ saveRDS(resultado_rfe_treebag, file = "resultado_rfe_treebag_6000_pruebajp")
 
 control_rfe_nb = rfeControl(functions = nbFuncs,
                             method = "repeatedcv",
-                            repeats = 1,
+                            repeats = 2,
                             number = 5,
                             allowParallel = TRUE)
 
@@ -140,12 +139,12 @@ set.seed(1234)
 
 tiempo = Sys.time()
 
-cl = makeCluster(4)
+cl = makeCluster(20)
 registerDoParallel(cl)
 
 resultado_rfe_nb = rfe(x = x_train_prueba,
                        y = y_train_prueba,
-                       sizes = c(300,400,500,550,600,700,800,900,1000),
+                       sizes = c(20,40,60,80,100,150,200,250,300,350,400,450,500,550,600,700,800,900,1000),
                        rfeControl = control_rfe_nb)
 
 tiempo.fin = Sys.time() - tiempo
@@ -157,7 +156,7 @@ saveRDS(resultado_rfe_nb, file = "resultado_rfe_nb_6000_pruebajp")
 
 control_rfe_lda = rfeControl(functions = ldaFuncs,
                              method = "repeatedcv",
-                             repeats = 1,
+                             repeats = 2,
                              number = 5,
                              allowParallel = TRUE)
 
@@ -165,12 +164,12 @@ set.seed(1234)
 
 tiempo = Sys.time()
 
-cl = makeCluster(4)
+cl = makeCluster(20)
 registerDoParallel(cl)
 
 resultado_rfe_lda = rfe(x = x_train_prueba,
                         y = y_train_prueba,
-                        sizes = c(300,400,500,550,600,700,800,900,1000),
+                        sizes = c(20,40,60,80,100,150,200,250,300,350,400,450,500,550,600,700,800,900,1000),
                         rfeControl = control_rfe_lda)
 
 tiempo.fin = Sys.time() - tiempo
