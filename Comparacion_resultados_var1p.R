@@ -110,15 +110,7 @@ df_modificado = df_modificado %>%
   select(last_col(), everything())
 
 
-resultado_rfe_tbag = readRDS("resultado_rfe_treebag_6000_pruebajp")
 
-df_modificado_reducido = df_modificado[,c(predictors(resultado_rfe_tbag),"grupo")]
-
-set.seed(1234)
-
-tbag_particion_2 = createDataPartition(df_modificado_reducido$grupo, p=0.80, list = FALSE)
-tbag_train_data = df_modificado_reducido[tbag_particion_2,]
-tbag_test_data = df_modificado_reducido[-tbag_particion_2,]
 
 ## -----------------------------------------------------------------------------
 
@@ -138,6 +130,29 @@ for (nombre in names(objetos2)){
   set.seed(1234)
   
   objeto = objetos2[[nombre]]
+  
+  parametros_model = unlist(strsplit(nombre, split = "_")
+  
+  if parametros_model[1] == "tbag"{
+  	parametros_model[1] = "treebag"
+  }
+  
+  print(nombre)
+  
+  
+  rdsfile = paste0("resultado_rfe_", parametros_model[1], "_6000_pruebajp")
+  resultado_rfe = readRDS(rdsfile)
+
+
+
+
+  df_modificado_reducido = df_modificado[,c(predictors(resultado_rfe),"grupo")]
+
+  set.seed(1234)
+
+  tbag_particion_2 = createDataPartition(df_modificado_reducido$grupo, p=0.80, list = FALSE)
+  tbag_train_data = df_modificado_reducido[tbag_particion_2,]
+  tbag_test_data = df_modificado_reducido[-tbag_particion_2,]
   
   # Realizar predicción
   set.seed(1234)
