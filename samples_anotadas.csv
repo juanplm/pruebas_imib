@@ -1,0 +1,350 @@
+id_sample,id_origen,patologia_principal,afectado,patologia_secundaria,SnomedCT,etiqueta_1,etiqueta_2,etiqueta_3
+S253639,253639,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11610359,11610359,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11610090,11610090,Brugada,Normal,No recogida,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+S11605522,11605522,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11124837,11124837,Dilatada,Normal Gen+,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+S403158,403158,Hipertrofica,Normal,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S417135,417135,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S10162148,10162148,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11603966,11603966,Arrit V Dcho,Afectado,SADS CI o sosp,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+S11125146,11125146,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11610360,11610360,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11631247,11631247,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11618544,11618544,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11607245,11607245,Hipertrofica,Normal Gen+,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11617207,11617207,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S254132,254132,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S253810,253810,Espongiforme (aislada),Afectado,No recogida,miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+S253459,253459,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11626077,11626077,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11631246,11631246,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S254169,254169,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11603658,11603658,Brugada,Afectado,No recogida,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+S415534,415534,Arrit V Dcho,Afectado,,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+S11600918,11600918,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S403674,403674,Brugada,Afectado,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+S417261,417261,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11626078,11626078,Hipertrofica,Posible,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S253545,253545,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S414479,414479,Hipertrofica,Posible,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11617206,11617206,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11124227,11124227,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+S11604222,11604222,Brugada,Afectado,No recogida,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+S11610888,11610888,Brugada,Normal Gen+,Hipertrofica,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+S11602684,11602684,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11607246,11607246,Hipertrofica,Afectado,QT corto,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S417724,417724,TV catecol,Anormal no dco,,taquicardia ventricular polimórfica catecolaminérgica (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+S11626079,11626079,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S416343,416343,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S17000524,17000524,Dilatada/Espongiforme,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11600870,11600870,Espongiforme (aislada),Posible,TV catecol,miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+S11125125,11125125,Hipertrofica,Normal Gen+,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11607099,11607099,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11124229,11124229,Arrit V Dcho,Normal Gen+,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+S254780,254780,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11631233,11631233,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S415905,415905,Arrit V Dcho,Anormal no dco,,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+S11124005,11124005,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+S11619389,11619389,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S253326,253326,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S414099,414099,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S10160308,10160308,Dilatada/Espongiforme,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11619382,11619382,Brugada,Afectado,No recogida,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+S11631370,11631370,Hipertrofica,Afectado,Espongiforme (aislada),miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11609201,11609201,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S403675,403675,Brugada,Normal,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+S403205,403205,Brugada,Normal,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+S11631380,11631380,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11614940,11614940,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11614724,11614724,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11610713,11610713,Dilatada/Espongiforme,Normal Gen+,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S414176,414176,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11124815,11124815,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+S254781,254781,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S403662,403662,Brugada,Afectado,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+S416220,416220,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S253629,253629,Hipertrofica,Afectado,Espongiforme (aislada),miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S254281,254281,Espongiforme (aislada),Afectado,No recogida,miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+S11619693,11619693,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A346,11124423,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A151,11607702,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A143,402923,Dilatada,Afectado,,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A397,11121365,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A62,11631014,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A21,417216,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A376,17002983,Hipertrofica,Anormal no dco,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A130,403646,Brugada,Afectado,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A26,417780,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A388,11613540,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A112,11603969,Arrit V Dcho,Posible,SADS posible (SUDS),displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A315,11616552,SADS posible (SUDS),Afectado,Brugada,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),muerte súbita cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A333,10112865,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A132,403659,Brugada,Afectado,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A133,17000162,SADS-corazon normal,Afectado,No recogida,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A327,D253877D,Brugada,Afectado,No recogida,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A197,10112681,Brugada,Afectado,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A193,11631053,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A392,11603152,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A300,D417624D,Hipertrofica,Normal,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A60,11631006,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A149,404357,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A37,253282,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A383,253498,Hipertrofica,Normal,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A167,417531,SADS CI o sosp,Afectado,,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A23,415495,Brugada,Afectado,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A59,11631004,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A49,10112653,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A191,D253685D,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A17,416197,Dilatada,Afectado,,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A52,10112723,Arrit V Izdo,Afectado,No recogida,miocardiopatía dilatada familiar con defecto de conducción debida a mutación de lámina A/C (trastorno),miocardiopatía familiar (trastorno),  cardiopatía (trastorno),
+A363,BBN1-068008-11623407,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A50,10112649,Hipertrofica,Afectado,SADS CI o sosp,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A382,320471,Hipertrofica,Normal,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A43,253062,Arrit V Dcho,Afectado,Ectasias,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A156,118738,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A321,D253484D,Parálisis Auricular,Normal Gen+,,paro auricular (trastorno),paro sinusal (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A348,11627868,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A118,415413,Brugada,Afectado,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A109,415010,Dilatada,Afectado,,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A34,253179,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A65,11631020,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A84,11631482,SADS-corazon normal,Afectado,No recogida,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A144,402915,Dilatada/Espongiforme,Afectado,,miocardiopatía congestiva (trastorno),miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A356,11625169,Dilatada 2ª isquemica,Afectado,No recogida,,,,
+A83,11631478,Arrit V Izdo,Afectado,No recogida,miocardiopatía dilatada familiar con defecto de conducción debida a mutación de lámina A/C (trastorno),miocardiopatía familiar (trastorno),  cardiopatía (trastorno),
+A370,11631253,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A131,402765,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A358,11613943,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A211,D254135D,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A27,417993,SADS CI o sosp,Afectado,HVI,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A307,112707,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A306,D254324D,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A347,11124338,Hipertrofica,Afectado,Espongiforme (aislada),miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A301,D417661D,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A378,17000531,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A6,416596,Hipertrofica,Afectado,Miocarditis,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A35,253180,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A73,11631035,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A391,11619051,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A373,911619582,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A317,D416482D,QT largo,Afectado,,síndrome de QT prolongado (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A367,11125267,Hipertrofica,Afectado,Espongiforme (aislada),miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A137,402279,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A141,11124424,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A361,11608663,Hipertrofica,Afectado,Amiloidosis,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A389,10112960,Hipertrofica,Normal,Brugada,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A360,11600874,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A153,11607704,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A135,17000152,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A70,11631034,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A323,D253515D,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A395,11613669,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A393,11124450,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A61,11631008,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A377,17003494,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A91,11631477,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A9,416600,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A213,D254618D,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A106,11123882,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A99,11626066,Miocarditis,Afectado,No recogida,miocarditis (trastorno),miocarditis (trastorno),  cardiopatía (trastorno),
+A165,417214,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A182,D253363D,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A355,Catálogo_11125769,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A53,14080165,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A64,11631018,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A351,80107931,Alt. Conducción,Normal Gen+,Espongiforme (aislada),bloqueo cardíaco (trastorno),trastorno de conducción cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A381,11616524,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A385,253967,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A7,416594,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A180,D112650D,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A322,253450,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A179,D112642D,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A318,17001215,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A362,11607693,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A97,11122738,Arrit V Dcho,Afectado,Hipertrofica,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A145,11125062,SADS-corazon normal,Afectado,No recogida,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A394,11122991,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A337,17003741,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A396,11612095,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A331,11613836,Deporte sosp MCP,Afectado,Espongiforme (aislada),sospecha de enfermedad cardíaca (situación),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A365,11604211,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A66,11631022,Arrit V Izdo,Afectado,No recogida,miocardiopatía dilatada familiar con defecto de conducción debida a mutación de lámina A/C (trastorno),miocardiopatía familiar (trastorno),  cardiopatía (trastorno),
+A329,10112585,Hipertrofica,Afectado,Dil aorta o bicuspide,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A14,416178,SADS CI o sosp,Afectado,,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A125,11125066,Aorta Aneur/disec,Afectado,No recogida,,,,
+A55,10112882,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A344,11604359,FV idiopatica,Afectado,No recogida,"fibrilación ventricular idiopática, no del tipo Brugada (trastorno)",arritmia ventricular (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A147,11125065,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A352,80107926,Alt. Conducción,Afectado,Espongiforme (aislada),bloqueo cardíaco (trastorno),trastorno de conducción cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A354,17007478,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A340,11631399,Brugada,Afectado,No recogida,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A11,417107,Arrit V Dcho,Afectado,,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A40,253066,SADS CI o sosp,Afectado,HVI,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A310,254845,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A316,D416411D,SADS CI o sosp,Afectado,,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A124,11124469,Arrit V Izdo,Afectado,No recogida,miocardiopatía dilatada familiar con defecto de conducción debida a mutación de lámina A/C (trastorno),miocardiopatía familiar (trastorno),  cardiopatía (trastorno),
+A189,D253649D,QT largo,Afectado,Parálisis Auricular,síndrome de QT prolongado (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A188,D253640D,Dilatada/Espongiforme,Afectado,HVI,miocardiopatía congestiva (trastorno),miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A152,11607703,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A41,253068,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A163,415404,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A157,161148,Dilatada/Espongiforme,Afectado,,miocardiopatía congestiva (trastorno),miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A3,414439,Brugada,Afectado,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A117,415326,MS lactante (SIDS),Afectado,,síndrome de muerte súbita del lactante (hallazgo),muerte súbita cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A74,11122725,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A30,112311,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A56,10112883,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A384,10162145,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A121,11124466,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A19,417211,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A13,416182,SADS CI o sosp,Afectado,,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A338,11606646,Arrit V Izdo,Afectado,Miocarditis,miocardiopatía dilatada familiar con defecto de conducción debida a mutación de lámina A/C (trastorno),miocardiopatía familiar (trastorno),  cardiopatía (trastorno),
+A42,253061,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A192,D253689D,Dilatada,Afectado,Parálisis Auricular,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A187,D253297D,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A119,415480,FV idiopatica,Afectado,,"fibrilación ventricular idiopática, no del tipo Brugada (trastorno)",arritmia ventricular (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A198,D112785D,MC no clasificable,Afectado,Arrit V Izdo,,miocardiopatía (trastorno),  cardiopatía (trastorno),
+A33,253178,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A183,D253395D,FV idiopatica,Normal,No recogida,"fibrilación ventricular idiopática, no del tipo Brugada (trastorno)",arritmia ventricular (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A335,11631495,Dilatada,Afectado,Miocarditis,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A158,11124017,FV idiopatica,Afectado,No recogida,"fibrilación ventricular idiopática, no del tipo Brugada (trastorno)",arritmia ventricular (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A186,D253486D,Parálisis Auricular,Posible,Hipertrofica,paro auricular (trastorno),paro sinusal (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A371,11917501,Miocarditis,Afectado,No recogida,miocarditis (trastorno),miocarditis (trastorno),  cardiopatía (trastorno),
+A104,11123885,MS lactante (SIDS),Afectado,No recogida,síndrome de muerte súbita del lactante (hallazgo),muerte súbita cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A113,11123896,Hipertrofica,Afectado,Fabry,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A142,11124425,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A78,11631442,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A330,10112738,Brugada,Afectado,No recogida,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A46,253065,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A380,10310640,Hipertrofica,Normal,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A390,10112961,Hipertrofica,Normal,Brugada,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A101,415453,Arrit V Dcho,Afectado,,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A201,10112896,Dilatada,Afectado,Arrit V Izdo,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A54,10112658,Miocarditis,Afectado,Arrit V Dcho,miocarditis (trastorno),miocarditis (trastorno),  cardiopatía (trastorno),
+A359,11604066,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A161,11631428,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A372,11606065,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),trastorno cardíaco estructural (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A339,11600007,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A72,253683,QT largo,Afectado,QT largo,síndrome de QT prolongado (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A166,417347,SADS CI o sosp,Afectado,HVI,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A10,416606,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A115,415218,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A305,D254154D,QT largo,Afectado,SADS CI o sosp,síndrome de QT prolongado (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A299,17000540,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A81,11631462,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A139,402848,Dilatada/Espongiforme,Afectado,,miocardiopatía congestiva (trastorno),miocardiopatía no compactada de miocardio ventricular (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A146,11125064,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A342,11611007,Arrit V Izdo,Afectado,Miocarditis,miocardiopatía dilatada familiar con defecto de conducción debida a mutación de lámina A/C (trastorno),miocardiopatía familiar (trastorno),  cardiopatía (trastorno),
+A303,D416219D,Hipertrofica,Normal,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A227,11603053,Miocarditis,Afectado,Dilatada,miocarditis (trastorno),miocarditis (trastorno),  cardiopatía (trastorno),
+A387,11613490,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A58,11631001,SADS-corazon normal,Afectado,No recogida,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A100,11122749,Arrit V Izdo,Afectado,No recogida,miocardiopatía dilatada familiar con defecto de conducción debida a mutación de lámina A/C (trastorno),miocardiopatía familiar (trastorno),  cardiopatía (trastorno),
+A2,160793,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A155,160043,Dilatada,Afectado,,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A314,11615388,FV idiopatica,Afectado,Vasoespasmo maligno,"fibrilación ventricular idiopática, no del tipo Brugada (trastorno)",arritmia ventricular (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A190,D253682D,QT largo,Posible,No recogida,síndrome de QT prolongado (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A326,D253820D,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A86,11631480,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A120,11124829,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A16,416196,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A369,11631252,Hipertrofica,Normal,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A343,11603047,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A126,11125069,MS lactante (SIDS),Afectado,Cardiopatia congenita,síndrome de muerte súbita del lactante (hallazgo),muerte súbita cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A349,17003954,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A194,10161832,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A341,BBN1-000832-11631491,MC no clasificable,Afectado,No recogida,,miocardiopatía (trastorno),  cardiopatía (trastorno),
+A5,416595,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A169,254855,SADS CI o sosp,Afectado,HVI,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A336,11617208,Hipertrofica,Normal Gen+,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A134,17000151,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A36,415761,QT largo,Afectado,,síndrome de QT prolongado (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A332,11600151,Dilatada,Anormal no dco,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A88,11631483,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A171,254852,Aorta Aneur/disec,Afectado,HVI,,,,
+A375,17002950,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A20,417212,Arrit V Dcho,Afectado,,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A94,417754,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A176,11122716,Hipertrofica,Afectado,SADS CI o sosp,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A184,D253372D,QT largo,Afectado,No recogida,síndrome de QT prolongado (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A32,253176,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A207,D417530D,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A196,10162150,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A98,11122734,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A364,11604222,Brugada,Afectado,No recogida,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A205,10118276,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A95,11122727,SADS posible (SUDS),Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),muerte súbita cardíaca (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A164,417103,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A368,11123655,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A103,414078,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A18,416198,SADS CI o sosp,Afectado,,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A181,D253165D,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A82,11631465,SADS-corazon normal,Afectado,No recogida,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A44,253063,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A319,D253300D,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A127,11631430,FV idiopatica,Afectado,No recogida,"fibrilación ventricular idiopática, no del tipo Brugada (trastorno)",arritmia ventricular (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A174,10112648,Miocarditis,Afectado,No recogida,miocarditis (trastorno),miocarditis (trastorno),  cardiopatía (trastorno),
+A24,417782,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A128,11125425,SADS-corazon normal,Afectado,No recogida,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A226,11602282,Hipertrofica,Afectado,QT largo,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A223,11600406,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A69,11631023,Arrit V Izdo,Afectado,No recogida,miocardiopatía dilatada familiar con defecto de conducción debida a mutación de lámina A/C (trastorno),miocardiopatía familiar (trastorno),  cardiopatía (trastorno),
+A178,D253680D,Hipertrofica,Afectado,Dilatada/Espongiforme,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A107,11123597,Arrit V Izdo,Afectado,Crisis epileptica,miocardiopatía dilatada familiar con defecto de conducción debida a mutación de lámina A/C (trastorno),miocardiopatía familiar (trastorno),  cardiopatía (trastorno),
+A116,11603961,SADS-corazon normal,Afectado,Brugada,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A80,11631439,Arrit V Dcho,Afectado,Sarcoidosis,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A140,11124416,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A71,11631032,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A159,10112717,SADS-corazon normal,Afectado,No recogida,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A22,417348,SADS CI o sosp,Afectado,HVI,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A154,161414,Dilatada,Afectado,,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A177,11626062,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A386,11606653,Hipertrofica,Normal Gen+,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A79,11631443,SADS-corazon normal,Afectado,No recogida,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A8,416601,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A108,415013,Brugada,Afectado,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A38,253283,Hipertrofica,Posible,SADS CI o sosp,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A350,80107927,Alt. Conducción,Afectado,Espongiforme (aislada),bloqueo cardíaco (trastorno),trastorno de conducción cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A195,10162149,Dilatada,Normal,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A123,11124828,SADS CI o sosp,Afectado,Hipertrofica,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A308,D253502D,Brugada,Afectado,,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A221,12214944,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A25,417784,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A168,254854,Hipertrofica,Afectado,SADS CI o sosp,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A129,403041,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A175,10112666,SADS-corazon normal,Afectado,No recogida,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A366,11618523,Brugada,Afectado,No recogida,síndrome de Brugada (trastorno),canalopatía cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A111,11123904,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A102,11122766,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A217,11605177,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A357,11625960,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A304,D253756D,Arrit V Dcho,Afectado,Sarcoidosis,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A114,11123897,SADS CI o sosp,No evaluado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A77,11631039,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A162,415764,SADS CI o sosp,Afectado,,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A48,253993,Hipertrofica,Afectado,QT largo,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A96,11122717,SADS-corazon normal,Afectado,No recogida,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A89,11631467,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A302,416772,MC no clasificable,Afectado,SADS CI o sosp,,miocardiopatía (trastorno),  cardiopatía (trastorno),
+A47,253428,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A353,12274924,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A51,10112721,Hipertrofica,Afectado,Arrit V Dcho,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A29,417997,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A12,417105,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A85,11631479,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A68,11631017,SADS-corazon normal,Afectado,HVI,muerte súbita cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A67,11631025,Aorta Aneur/disec,Afectado,No recogida,,,,
+A374,17002946,Dilatada,Afectado,No recogida,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A138,406094,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A15,416179,SADS CI o sosp,Afectado,,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A210,D160215D,MC no clasificable,Afectado,No recogida,,miocardiopatía (trastorno),  cardiopatía (trastorno),
+A379,17000969,Dilatada 2ª isquemica,Afectado,No recogida,,,,
+A39,254851,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A63,11631015,SADS CI o sosp,Afectado,No recogida,muerte súbita cardíaca debida a arritmia cardíaca (trastorno),arritmia cardíaca (trastorno),  cardiopatía (trastorno),
+A160,10112711,MS lactante (SIDS),Afectado,No recogida,síndrome de muerte súbita del lactante (hallazgo),muerte súbita cardíaca (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A150,112177,Hipertrofica,Afectado,,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A173,254196,Arrit V Dcho,Afectado,No recogida,displasia arritmogénica del ventrículo derecho (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
+A136,17000050,Hipertrofica,Afectado,No recogida,miocardiopatía hipertrófica (trastorno),miocardiopatía hipertrófica (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno)
+A185,D253483D,Parálisis Auricular,Afectado,,paro auricular (trastorno),paro sinusal (trastorno), arritmia cardíaca (trastorno),  cardiopatía (trastorno)
+A148,112639,Dilatada,Afectado,,miocardiopatía congestiva (trastorno),miocardiopatía (trastorno),  cardiopatía (trastorno),
