@@ -164,7 +164,7 @@ print(tiempo.fin)
 
 stopCluster(cl)
 
-saveRDS(resultado_rfe_nb, file = "rfe_nb_9010_prop2")
+saveRDS(resultado_rfe_nb, file = "rfe_nb_9010_prop1")
 
 
 #### Linear Discriminant Analysis
@@ -194,7 +194,7 @@ print(tiempo.fin)
 
 stopCluster(cl)
 
-saveRDS(resultado_rfe_lda, file = "rfe_lda_9010_prop2")
+saveRDS(resultado_rfe_lda, file = "rfe_lda_9010_prop1")
 
 
 
