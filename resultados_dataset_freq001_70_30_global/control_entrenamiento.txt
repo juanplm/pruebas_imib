@@ -1,0 +1,120 @@
+[1] "Comienzo algoritmo SVML de tbag y semilla 1234"
+Time difference of 21.94155 secs
+[1] "Comienzo algoritmo SVMR de tbag y semilla 1234"
+Time difference of 1.689762 mins
+[1] "Comienzo algoritmo SVMP de tbag y semilla 1234"
+Time difference of 1.625134 mins
+[1] "Comienzo algoritmo RF de tbag y semilla 1234"
+Time difference of 1.162275 mins
+[1] "Comienzo algoritmo NB de tbag y semilla 1234"
+Time difference of 1.490336 mins
+[1] "Comienzo algoritmo SVML de rf y semilla 1234"
+Time difference of 26.75396 secs
+[1] "Comienzo algoritmo SVMR de rf y semilla 1234"
+Time difference of 2.023827 mins
+[1] "Comienzo algoritmo SVMP de rf y semilla 1234"
+Time difference of 1.973949 mins
+[1] "Comienzo algoritmo RF de rf y semilla 1234"
+Time difference of 1.361833 mins
+[1] "Comienzo algoritmo NB de rf y semilla 1234"
+Time difference of 1.826009 mins
+[1] "Comienzo algoritmo SVML de lda y semilla 1234"
+Time difference of 35.44441 secs
+[1] "Comienzo algoritmo SVMR de lda y semilla 1234"
+Time difference of 2.585374 mins
+[1] "Comienzo algoritmo SVMP de lda y semilla 1234"
+Time difference of 2.52265 mins
+[1] "Comienzo algoritmo RF de lda y semilla 1234"
+Time difference of 1.595394 mins
+[1] "Comienzo algoritmo NB de lda y semilla 1234"
+Time difference of 2.345886 mins
+[1] "Comienzo algoritmo SVML de nb y semilla 1234"
+Time difference of 3.812471 secs
+[1] "Comienzo algoritmo SVMR de nb y semilla 1234"
+Time difference of 14.16531 secs
+[1] "Comienzo algoritmo SVMP de nb y semilla 1234"
+Time difference of 13.0615 secs
+[1] "Comienzo algoritmo RF de nb y semilla 1234"
+Time difference of 20.22338 secs
+[1] "Comienzo algoritmo NB de nb y semilla 1234"
+Time difference of 10.62508 secs
+[1] "Comienzo algoritmo SVML de tbag y semilla 1515"
+Time difference of 8.201098 secs
+[1] "Comienzo algoritmo SVMR de tbag y semilla 1515"
+Time difference of 40.65335 secs
+[1] "Comienzo algoritmo SVMP de tbag y semilla 1515"
+Time difference of 38.49604 secs
+[1] "Comienzo algoritmo RF de tbag y semilla 1515"
+Time difference of 37.94846 secs
+[1] "Comienzo algoritmo NB de tbag y semilla 1515"
+Time difference of 33.83063 secs
+[1] "Comienzo algoritmo SVML de rf y semilla 1515"
+Time difference of 1.345653 mins
+[1] "Comienzo algoritmo SVMR de rf y semilla 1515"
+Time difference of 5.104396 mins
+[1] "Comienzo algoritmo SVMP de rf y semilla 1515"
+Time difference of 5.029851 mins
+[1] "Comienzo algoritmo RF de rf y semilla 1515"
+Time difference of 2.901629 mins
+[1] "Comienzo algoritmo NB de rf y semilla 1515"
+Time difference of 4.80872 mins
+[1] "Comienzo algoritmo SVML de lda y semilla 1515"
+Time difference of 45.78606 secs
+[1] "Comienzo algoritmo SVMR de lda y semilla 1515"
+Time difference of 10.12132 secs
+[1] "Comienzo algoritmo SVMP de lda y semilla 1515"
+Time difference of 10.41358 secs
+[1] "Comienzo algoritmo RF de lda y semilla 1515"
+Time difference of 17.14383 secs
+[1] "Comienzo algoritmo NB de lda y semilla 1515"
+Time difference of 7.133304 secs
+[1] "Comienzo algoritmo SVML de nb y semilla 1515"
+Time difference of 4.383307 secs
+[1] "Comienzo algoritmo SVMR de nb y semilla 1515"
+Time difference of 16.51906 secs
+[1] "Comienzo algoritmo SVMP de nb y semilla 1515"
+Time difference of 15.4005 secs
+[1] "Comienzo algoritmo RF de nb y semilla 1515"
+Time difference of 22.19431 secs
+[1] "Comienzo algoritmo NB de nb y semilla 1515"
+Time difference of 12.80524 secs
+[1] "Comienzo algoritmo SVML de tbag y semilla 5678"
+Time difference of 35.90138 secs
+[1] "Comienzo algoritmo SVMR de tbag y semilla 5678"
+maximum number of iterations reached 0.0001201772 0.0001096794Time difference of 2.572228 mins
+[1] "Comienzo algoritmo SVMP de tbag y semilla 5678"
+Time difference of 2.524896 mins
+[1] "Comienzo algoritmo RF de tbag y semilla 5678"
+Time difference of 1.596385 mins
+[1] "Comienzo algoritmo NB de tbag y semilla 5678"
+Time difference of 2.347283 mins
+[1] "Comienzo algoritmo SVML de rf y semilla 5678"
+Time difference of 1.47776 mins
+[1] "Comienzo algoritmo SVMR de rf y semilla 5678"
+Time difference of 5.192475 mins
+[1] "Comienzo algoritmo SVMP de rf y semilla 5678"
+Time difference of 5.084745 mins
+[1] "Comienzo algoritmo RF de rf y semilla 5678"
+Time difference of 2.891938 mins
+[1] "Comienzo algoritmo NB de rf y semilla 5678"
+Time difference of 4.787698 mins
+[1] "Comienzo algoritmo SVML de lda y semilla 5678"
+Time difference of 24.51396 secs
+[1] "Comienzo algoritmo SVMR de lda y semilla 5678"
+Time difference of 1.862948 mins
+[1] "Comienzo algoritmo SVMP de lda y semilla 5678"
+Time difference of 1.799229 mins
+[1] "Comienzo algoritmo RF de lda y semilla 5678"
+Time difference of 1.240457 mins
+[1] "Comienzo algoritmo NB de lda y semilla 5678"
+Time difference of 1.732419 mins
+[1] "Comienzo algoritmo SVML de nb y semilla 5678"
+Time difference of 5.687331 secs
+[1] "Comienzo algoritmo SVMR de nb y semilla 5678"
+Time difference of 23.35659 secs
+[1] "Comienzo algoritmo SVMP de nb y semilla 5678"
+Time difference of 22.12512 secs
+[1] "Comienzo algoritmo RF de nb y semilla 5678"
+Time difference of 26.39287 secs
+[1] "Comienzo algoritmo NB de nb y semilla 5678"
+Time difference of 19.65662 secs

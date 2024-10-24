@@ -1,0 +1,259 @@
+---
+title: "Validacion 7030"
+output: html_document
+date: "2024-10-24"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+setwd("~/resultados_dataset_freq001_70_30_global")
+
+library(caret)
+library(dplyr)
+library(tidyr)
+```
+
+```{r}
+listado_rds <- basename(list.files(path = getwd(), pattern = "^modelo_", full.names = TRUE))
+
+listado_modelos <- list()
+
+for (modelo in listado_rds){
+  mod <- readRDS(modelo)
+  listado_modelos[[modelo]] <- mod  
+}
+```
+
+```{r warning=FALSE}
+resultados_resamples = resamples(listado_modelos)
+```
+
+```{r}
+resultados_resamples$values %>% head(10)
+```
+
+```{r}
+metricas_resamples <- resultados_resamples$values %>%
+                         gather(key = "modelo", value = "valor", -Resample) %>%
+                         separate(col = "modelo", into = c("modelo", "metrica"),
+                                  sep = "~", remove = TRUE)
+
+metricas_resamples %>% 
+  group_by(modelo, metrica) %>% 
+  summarise(media = mean(valor)) %>%
+  spread(key = metrica, value = media) %>%
+  arrange(desc(Accuracy))
+```
+
+```{r , fig.height=12, fig.width=8}
+metricas_resamples %>%
+  filter(metrica == "Accuracy") %>%
+  group_by(modelo) %>% 
+  summarise(media = mean(valor)) %>%
+  ggplot(aes(x = reorder(modelo, media), y = media, label = round(media, 2))) +
+    geom_segment(aes(x = reorder(modelo, media), y = 0,
+                     xend = modelo, yend = media),
+                     color = "grey50") +
+    geom_point(size = 7, color = "firebrick") +
+    geom_text(color = "white", size = 2.5) +
+    scale_y_continuous(limits = c(0, 1)) +
+    # Accuracy basal
+    geom_hline(yintercept = 0.62, linetype = "dashed") +
+    annotate(geom = "text", y = 0.72, x = 8.5, label = "Accuracy basal") +
+    labs(title = "Validación: Accuracy medio repeated-CV",
+         subtitle = "Modelos ordenados por media",
+         x = "modelo") +
+    coord_flip() +
+    theme_bw()
+```
+
+```{r, fig.height=12, fig.width=8}
+metricas_resamples %>% filter(metrica == "Accuracy") %>%
+  group_by(modelo) %>% 
+  mutate(media = mean(valor)) %>%
+  ungroup() %>%
+  ggplot(aes(x = reorder(modelo, media), y = valor, color = modelo)) +
+    geom_boxplot(alpha = 0.6, outlier.shape = NA) +
+    geom_jitter(width = 0.1, alpha = 0.6) +
+    scale_y_continuous(limits = c(0, 1)) +
+    # Accuracy basal
+    geom_hline(yintercept = 0.62, linetype = "dashed") +
+    #annotate(geom = "text", y = 0.65, x = 8.5, label = "Accuracy basal") +
+    theme_bw() +
+    labs(title = "Validación: Accuracy medio repeated-CV",
+         subtitle = "Modelos ordenados por media") +
+    coord_flip() +
+    theme(legend.position = "none")
+```
+
+
+Para hacer el test, a cada modelo tenemos que darle los datos de test correspondientes a su semilla.
+
+```{r}
+df_variantes <- read.csv("dataset2_5pc_modificado.csv")
+rownames(df_variantes) = df_variantes[,1]
+df_variantes = df_variantes[,-1]
+```
+
+```{r}
+
+lista_1234 <- list()
+lista_1515 <- list()
+lista_5678 <- list()
+
+for (modelo in names(listado_modelos)){
+
+  if (grepl("1234", modelo) == TRUE){
+      lista_1234[[modelo]] <- listado_modelos[[modelo]]
+  }
+  
+  if (grepl("1515", modelo) == TRUE){
+      lista_1515[[modelo]] <- listado_modelos[[modelo]]
+  }
+  
+  if (grepl("5678", modelo) == TRUE){
+      lista_5678[[modelo]] <- listado_modelos[[modelo]]
+  }
+}
+```
+
+
+```{r}
+df_variantes$grupo = as.factor(df_variantes$grupo)
+
+set.seed(1234)
+particion_1234 = createDataPartition(df_variantes$grupo, p=0.7, list = FALSE)
+test_1234 = df_variantes[-particion_1234,]
+test_1234$grupo = as.factor(test_1234$grupo)
+
+set.seed(1515)
+particion_1515 = createDataPartition(df_variantes$grupo, p=0.7, list = FALSE)
+test_1515 = df_variantes[-particion_1515,]
+test_1515$grupo = as.factor(test_1515$grupo)
+
+set.seed(5678)
+particion_5678 = createDataPartition(df_variantes$grupo, p=0.7, list = FALSE)
+test_5678 = df_variantes[-particion_5678,]
+test_5678$grupo = as.factor(test_5678$grupo)
+```
+
+```{r}
+set.seed(1234)
+predicciones_1234 <- lapply(lista_1234, function(model) {
+  predict(model, test_1234 %>% select(-grupo))
+})
+
+matrices_confusion_1234 <- lapply(predicciones_1234, function(pred) {
+  confusionMatrix(pred, test_1234$grupo)
+})
+
+set.seed(1515)
+predicciones_1515 <- lapply(lista_1515, function(model) {
+  predict(model, test_1515 %>% select(-grupo))
+})
+
+matrices_confusion_1515 <- lapply(predicciones_1515, function(pred) {
+  confusionMatrix(pred, test_1515$grupo)
+})
+
+set.seed(5678)
+predicciones_5678 <- lapply(lista_5678, function(model) {
+  predict(model, test_5678 %>% select(-grupo))
+})
+
+matrices_confusion_5678 <- lapply(predicciones_5678, function(pred) {
+  confusionMatrix(pred, test_5678$grupo)
+})
+```
+
+
+```{r}
+lista_1234$modelo_lda_svml_7030_1234$results[rownames(lista_1234$modelo_lda_svml_7030_1234$bestTune) == rownames(lista_1234$modelo_lda_svml_7030_1234$results),][["Accuracy"]]
+lista_1234$modelo_lda_svml_7030_1234$results[rownames(lista_1234$modelo_lda_svml_7030_1234$bestTune) == rownames(lista_1234$modelo_lda_svml_7030_1234$results),][["Kappa"]]
+matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["Accuracy"]]
+matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["Kappa"]]
+matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["McnemarPValue"]]
+matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Sensitivity"]]
+matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Specificity"]]
+matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Precision"]]
+matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Recall"]]
+matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["F1"]]
+as.character(lista_1234$modelo_lda_svml_7030_1234$bestTune)
+length(lista_1234$modelo_lda_svml_7030_1234$trainingData[,-length(lista_1234$modelo_lda_svml_7030_1234$trainingData)])
+
+
+
+```
+
+```{r}
+columnas = c("Metodo","Acc_train", "Kappa_train", "Acc_test", "Kappa_test", "Sens", "Spec", "Precis","Recall","F1", "Hiper_comb", "Vars", "RFE","Semilla")
+
+df_resultados = data.frame(matrix(nrow = 0, ncol = length(columnas)))
+colnames(df_resultados) = columnas
+
+for (modelo in names(listado_modelos)){
+
+	if (grepl("1234",modelo) == TRUE){
+		lista_base = lista_1234
+		semilla = "1234"
+	}
+
+	if (grepl("1515",modelo) == TRUE){
+		lista_base = lista_1515
+		semilla = "1515"
+	}
+
+	if (grepl("5678",modelo) == TRUE){
+		lista_base = lista_5678
+	  semilla = "5678"
+	}
+	
+  lista_1234$modelo_lda_svml_7030_1234$results[rownames(lista_1234$modelo_lda_svml_7030_1234$bestTune) == rownames(lista_1234$modelo_lda_svml_7030_1234$results),][["Accuracy"]]
+  lista_1234$modelo_lda_svml_7030_1234$results[rownames(lista_1234$modelo_lda_svml_7030_1234$bestTune) == rownames(lista_1234$modelo_lda_svml_7030_1234$results),][["Kappa"]]
+  matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["Accuracy"]]
+  matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["Kappa"]]
+  matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["McnemarPValue"]]
+  matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Sensitivity"]]
+  matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Specificity"]]
+  matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Precision"]]
+  matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Recall"]]
+  matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["F1"]]
+  as.character(lista_1234$modelo_lda_svml_7030_1234$bestTune)
+  length(lista_1234$modelo_lda_svml_7030_1234$trainingData[,-length(lista_1234$modelo_lda_svml_7030_1234$trainingData)])
+  	
+	
+	nueva_fila = data.frame(Metodo = metodo,
+			        Acc_train = acc_training, 
+			        Kappa_train = kappa_training, 
+			        Acc_test = acc_test,
+			        Kappa_test = kappa_test,
+			        Sens = sensib, 
+			        Spec = spec, 
+			        Precis = precis,
+			        F1 = f1, 
+			        Hiper_comb = comb_hiperpar, 
+			        Partic = part_datos,
+			        RFE = rfe_mod,
+				Vars = vars,
+				Semilla = semilla)
+
+	df_resultados = rbind(df_resultados, nueva_fila)
+
+}	
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
