@@ -8,7 +8,7 @@ date: "2024-10-24"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```{r warning=FALSE}
 setwd("~/resultados_dataset_freq001_70_30_global")
 
 library(caret)
@@ -37,12 +37,12 @@ resultados_resamples$values %>% head(10)
 
 ```{r}
 metricas_resamples <- resultados_resamples$values %>%
-                         gather(key = "modelo", value = "valor", -Resample) %>%
-                         separate(col = "modelo", into = c("modelo", "metrica"),
+                         gather(key = "Modelo", value = "valor", -Resample) %>%
+                         separate(col = "Modelo", into = c("Modelo", "metrica"),
                                   sep = "~", remove = TRUE)
 
 metricas_resamples %>% 
-  group_by(modelo, metrica) %>% 
+  group_by(Modelo, metrica) %>% 
   summarise(media = mean(valor)) %>%
   spread(key = metrica, value = media) %>%
   arrange(desc(Accuracy))
@@ -51,11 +51,11 @@ metricas_resamples %>%
 ```{r , fig.height=12, fig.width=8}
 metricas_resamples %>%
   filter(metrica == "Accuracy") %>%
-  group_by(modelo) %>% 
+  group_by(Modelo) %>% 
   summarise(media = mean(valor)) %>%
-  ggplot(aes(x = reorder(modelo, media), y = media, label = round(media, 2))) +
-    geom_segment(aes(x = reorder(modelo, media), y = 0,
-                     xend = modelo, yend = media),
+  ggplot(aes(x = reorder(Modelo, media), y = media, label = round(media, 2))) +
+    geom_segment(aes(x = reorder(Modelo, media), y = 0,
+                     xend = Modelo, yend = media),
                      color = "grey50") +
     geom_point(size = 7, color = "firebrick") +
     geom_text(color = "white", size = 2.5) +
@@ -72,10 +72,10 @@ metricas_resamples %>%
 
 ```{r, fig.height=12, fig.width=8}
 metricas_resamples %>% filter(metrica == "Accuracy") %>%
-  group_by(modelo) %>% 
+  group_by(Modelo) %>% 
   mutate(media = mean(valor)) %>%
   ungroup() %>%
-  ggplot(aes(x = reorder(modelo, media), y = valor, color = modelo)) +
+  ggplot(aes(x = reorder(Modelo, media), y = valor, color = Modelo)) +
     geom_boxplot(alpha = 0.6, outlier.shape = NA) +
     geom_jitter(width = 0.1, alpha = 0.6) +
     scale_y_continuous(limits = c(0, 1)) +
@@ -118,6 +118,7 @@ for (modelo in names(listado_modelos)){
       lista_5678[[modelo]] <- listado_modelos[[modelo]]
   }
 }
+
 ```
 
 
@@ -138,6 +139,7 @@ set.seed(5678)
 particion_5678 = createDataPartition(df_variantes$grupo, p=0.7, list = FALSE)
 test_5678 = df_variantes[-particion_5678,]
 test_5678$grupo = as.factor(test_5678$grupo)
+
 ```
 
 ```{r}
@@ -170,60 +172,52 @@ matrices_confusion_5678 <- lapply(predicciones_5678, function(pred) {
 ```
 
 
-```{r}
-lista_1234$modelo_lda_svml_7030_1234$results[rownames(lista_1234$modelo_lda_svml_7030_1234$bestTune) == rownames(lista_1234$modelo_lda_svml_7030_1234$results),][["Accuracy"]]
-lista_1234$modelo_lda_svml_7030_1234$results[rownames(lista_1234$modelo_lda_svml_7030_1234$bestTune) == rownames(lista_1234$modelo_lda_svml_7030_1234$results),][["Kappa"]]
-matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["Accuracy"]]
-matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["Kappa"]]
-matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["McnemarPValue"]]
-matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Sensitivity"]]
-matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Specificity"]]
-matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Precision"]]
-matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Recall"]]
-matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["F1"]]
-as.character(lista_1234$modelo_lda_svml_7030_1234$bestTune)
-length(lista_1234$modelo_lda_svml_7030_1234$trainingData[,-length(lista_1234$modelo_lda_svml_7030_1234$trainingData)])
-
-
-
-```
 
 ```{r}
-columnas = c("Metodo","Acc_train", "Kappa_train", "Acc_test", "Kappa_test", "Sens", "Spec", "Precis","Recall","F1", "Hiper_comb", "Vars", "RFE","Semilla")
+columnas = c("Metodo","Acc_train", "Kappa_train", "Acc_test", "Kappa_test", "Sens", "Spec", "Precis","Recall","F1", "Hiper_comb", "Vars", "RFE","Semilla","Modelo")
 
 df_resultados = data.frame(matrix(nrow = 0, ncol = length(columnas)))
 colnames(df_resultados) = columnas
 
-for (modelo in names(listado_modelos)){
+```
+
+
+```{r}
+for (modelo in listado_rds){
 
 	if (grepl("1234",modelo) == TRUE){
 		lista_base = lista_1234
+		matriz_base = matrices_confusion_1234
 		semilla = "1234"
 	}
 
 	if (grepl("1515",modelo) == TRUE){
 		lista_base = lista_1515
+		matriz_base = matrices_confusion_1515
 		semilla = "1515"
 	}
 
 	if (grepl("5678",modelo) == TRUE){
 		lista_base = lista_5678
+		matriz_base = matrices_confusion_5678
 	  semilla = "5678"
 	}
 	
-  lista_1234$modelo_lda_svml_7030_1234$results[rownames(lista_1234$modelo_lda_svml_7030_1234$bestTune) == rownames(lista_1234$modelo_lda_svml_7030_1234$results),][["Accuracy"]]
-  lista_1234$modelo_lda_svml_7030_1234$results[rownames(lista_1234$modelo_lda_svml_7030_1234$bestTune) == rownames(lista_1234$modelo_lda_svml_7030_1234$results),][["Kappa"]]
-  matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["Accuracy"]]
-  matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["Kappa"]]
-  matrices_confusion_1234$modelo_lda_svml_7030_1234$overall[["McnemarPValue"]]
-  matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Sensitivity"]]
-  matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Specificity"]]
-  matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Precision"]]
-  matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["Recall"]]
-  matrices_confusion_1234$modelo_lda_svml_7030_1234$byClass[["F1"]]
-  as.character(lista_1234$modelo_lda_svml_7030_1234$bestTune)
-  length(lista_1234$modelo_lda_svml_7030_1234$trainingData[,-length(lista_1234$modelo_lda_svml_7030_1234$trainingData)])
-  	
+
+  acc_training <- lista_base[[modelo]]$results[rownames(lista_base[[modelo]]$bestTune) == rownames(lista_base[[modelo]]$results),][["Accuracy"]]
+  kappa_training <- lista_base[[modelo]]$results[rownames(lista_base[[modelo]]$bestTune) == rownames(lista_base[[modelo]]$results),][["Kappa"]]
+  acc_test <- matriz_base[[modelo]]$overall[["Accuracy"]]
+  kappa_test <- matriz_base[[modelo]]$overall[["Kappa"]]
+  mcnemar <- matriz_base[[modelo]]$overall[["McnemarPValue"]]
+  sensib <- matriz_base[[modelo]]$byClass[["Sensitivity"]]
+  spec <- matriz_base[[modelo]]$byClass[["Specificity"]]
+  precis <- matriz_base[[modelo]]$byClass[["Precision"]]
+  rec <- matriz_base[[modelo]]$byClass[["Recall"]]
+  f1 <- matriz_base[[modelo]]$byClass[["F1"]]
+  comb_hiperpar <- paste(names(lista_base[[modelo]]$bestTune), lista_base[[modelo]]$bestTune, sep = "=", collapse = ", ")
+  num_vars <- length(lista_base[[modelo]]$trainingData[,-length(lista_base[[modelo]]$trainingData)])
+  rfe_mod <- strsplit(modelo, split = "_")[[1]][4]
+  metodo = lista_base[[modelo]]$method
 	
 	nueva_fila = data.frame(Metodo = metodo,
 			        Acc_train = acc_training, 
@@ -233,25 +227,225 @@ for (modelo in names(listado_modelos)){
 			        Sens = sensib, 
 			        Spec = spec, 
 			        Precis = precis,
+			        Recall = rec,
 			        F1 = f1, 
-			        Hiper_comb = comb_hiperpar, 
-			        Partic = part_datos,
+			        Hiper_comb = comb_hiperpar,
+				      Vars = num_vars,
 			        RFE = rfe_mod,
-				Vars = vars,
-				Semilla = semilla)
+				      Semilla = semilla,
+				      Modelo = modelo)
 
 	df_resultados = rbind(df_resultados, nueva_fila)
 
 }	
 ```
 
+```{r}
+metricas_predicciones = df_resultados %>% 
+                          group_by(Modelo) %>%
+                          summarise(Acc_train = mean(Acc_train), 
+                                    Acc_test = mean(Acc_test),
+                                    Kappa_train = mean(Kappa_train),
+                                    Kappa_test = mean(Kappa_test),
+                                    Sensibilidad = mean(Sens),
+                                    Especificidad = mean(Spec))
+
+```
+
+```{r}
+metricas_chiquitas <- metricas_predicciones %>% 
+                        select(Modelo, Acc_test, Acc_train) %>%
+                        arrange(desc(Acc_test))
+```
+
+```{r, fig.width=10, fig.height=15}
+# Convertir metricas_predicciones a formato largo
+metricas_long <- metricas_predicciones %>%
+  pivot_longer(cols = starts_with("Acc"), 
+               names_to = "dataType", 
+               values_to = "accuracy") %>%
+  mutate(dataType = recode(dataType, 
+                           "Acc_train" = "Train", 
+                           "Acc_test" = "Test"))
+
+pdf("Modelos 7030.pdf", width = 10, height = 20)
+
+# Generar el gráfico
+ggplot(data = metricas_long,
+       aes(x = reorder(Modelo, accuracy), y = accuracy,
+           color = dataType, label = round(accuracy, 2))) +
+  geom_point(size = 8) +
+  scale_color_manual(values = c("orangered2", "gray50")) +
+  geom_text(color = "white", size = 3) +
+  scale_y_continuous(limits = c(0, 1)) +
+  # Línea de Accuracy basal
+  #geom_hline(yintercept = 0.62, linetype = "dashed") +
+  #annotate(geom = "text", y = 0.66, x = 8.5, label = "Accuracy basal") +
+  coord_flip() +
+  labs(title = "Accuracy de entrenamiento y test", 
+       x = "Modelo") +
+  theme_bw() + 
+  theme(legend.position = "bottom")
+
+dev.off()
+```
+
+```{r}
+listado_rds[1]
+```
 
 
+```{r}
+metricas_predicciones <- metricas_predicciones %>%
+  mutate(Modelo_RFE = sub("^[^_]*_([^_]*)_.*$", "\\1", Modelo),      # Extrae "lda"
+         Algoritmo = sub("^[^_]*_[^_]*_([^_]*)_.*$", "\\1", Modelo)) 
+```
+
+```{r, fig.width=10, fig.height=15}
+# Convertir metricas_predicciones a formato largo
+metricas_long <- metricas_predicciones %>%
+  pivot_longer(cols = starts_with("Acc"), 
+               names_to = "dataType", 
+               values_to = "accuracy") %>%
+  mutate(dataType = recode(dataType, 
+                           "Acc_train" = "Train", 
+                           "Acc_test" = "Test"))
+
+pdf("Modelos 7030.pdf", width = 10, height = 20)
+
+# Generar el gráfico
+ggplot(data = metricas_long,
+       aes(x = reorder(Modelo, accuracy), y = accuracy,
+           color = dataType, label = round(accuracy, 2))) +
+  geom_point(size = 8) +
+  scale_color_manual(values = c("orangered2", "gray50")) +
+  geom_text(color = "white", size = 3) +
+  scale_y_continuous(limits = c(0, 1)) +
+  # Línea de Accuracy basal
+  #geom_hline(yintercept = 0.62, linetype = "dashed") +
+  #annotate(geom = "text", y = 0.66, x = 8.5, label = "Accuracy basal") +
+  coord_flip() +
+  labs(title = "Accuracy de train y test - 70/30", 
+       x = "Modelo") +
+  theme_bw() + 
+  theme(legend.position = "top")
+
+dev.off()
+```
 
 
+```{r}
+metricas_predicciones <- metricas_predicciones %>%
+  mutate(Modelo_RFE = sub("^[^_]*_([^_]*)_.*$", "\\1", Modelo),      # Extrae "lda"
+         Algoritmo = sub("^[^_]*_[^_]*_([^_]*)_.*$", "\\1", Modelo)) 
+```
+
+```{r, fig.width=20, fig.height=10}
+metricas_long <- metricas_predicciones %>%
+  pivot_longer(cols = starts_with("Acc"), 
+               names_to = "dataType", 
+               values_to = "accuracy") %>%
+  mutate(dataType = recode(dataType, 
+                           "Acc_train" = "Train", 
+                           "Acc_test" = "Test"))
+
+pdf("Modelos_agrupados_7030.pdf", width = 20, height = 10)
+
+# Generar el gráfico con agrupación
+ggplot(data = metricas_long,
+       aes(x = reorder(Modelo, accuracy), y = accuracy,
+           color = dataType, label = round(accuracy, 2))) +
+  geom_point(size = 6) +
+  scale_color_manual(values = c("orangered2", "gray50")) +
+  geom_text(color = "white", size = 2) +
+  scale_y_continuous(limits = c(0, 1)) +
+  coord_flip() +
+  labs(title = "Accuracy de train y test - 70/30", 
+       x = "Modelo") +
+  theme_bw() + 
+  theme(legend.position = "top") +
+  facet_wrap(~ Algoritmo + Modelo_RFE, scales = "free_y") # Agrupa por algoritmo y modelo de RFE
+
+dev.off()
+```
+
+```{r}
+# Crear una columna sin la semilla en metricas_predicciones
+metricas_predicciones <- df_resultados %>% 
+  mutate(Modelo_sin_semilla = sub("_[0-9]+$", "", Modelo)) %>% # Quitar la parte de la semilla
+  group_by(Modelo_sin_semilla) %>%
+  summarise(Acc_train = mean(Acc_train), 
+            Acc_test = mean(Acc_test),
+            Kappa_train = mean(Kappa_train),
+            Kappa_test = mean(Kappa_test),
+            Sensibilidad = mean(Sens),
+            Especificidad = mean(Spec))
+
+# Convertir a formato largo para ggplot
+metricas_long <- metricas_predicciones %>%
+  pivot_longer(cols = starts_with("Acc"), 
+               names_to = "dataType", 
+               values_to = "accuracy") %>%
+  mutate(dataType = recode(dataType, 
+                           "Acc_train" = "Train", 
+                           "Acc_test" = "Test"))
+
+# Guardar el gráfico en un archivo PDF
+pdf("Modelos_7030_Sin_Semilla.pdf", width = 12, height = 9)
+
+# Generar el gráfico
+ggplot(data = metricas_long,
+       aes(x = reorder(Modelo_sin_semilla, accuracy), y = accuracy,
+           color = dataType, label = round(accuracy, 2))) +
+  geom_point(size = 8) +
+  scale_color_manual(values = c("orangered2", "gray50")) +
+  geom_text(color = "white", size = 3) +
+  scale_y_continuous(limits = c(0, 1)) +
+  coord_flip() +
+  labs(title = "Accuracy de train y test - 70/30", 
+       x = "Modelos") +
+  theme_bw() + 
+  theme(legend.position = "top")
+
+dev.off()
+```
 
 
+```{r}
+# Crear una columna sin la semilla en metricas_predicciones
+metricas_predicciones <- df_resultados %>% 
+  mutate(Modelo_sin_semilla = sub("_[0-9]+$", "", Modelo)) %>% # Quitar la parte de la semilla
+  group_by(Modelo_sin_semilla) %>%
+  summarise(Sensibilidad = mean(Sens), 
+            Especificidad = mean(Spec))
 
+# Convertir a formato largo para ggplot
+metricas_long <- metricas_predicciones %>%
+  pivot_longer(cols = c(Sensibilidad, Especificidad), 
+               names_to = "metric", 
+               values_to = "valor")
+
+# Guardar el gráfico en un archivo PDF
+pdf("Modelos_7030_Sensibilidad_Especificidad.pdf", width = 12, height = 9)
+
+# Generar el gráfico
+ggplot(data = metricas_long,
+       aes(x = reorder(Modelo_sin_semilla, valor), y = valor,
+           color = metric, label = round(valor, 2))) +
+  geom_point(size = 8) +
+  scale_color_manual(values = c("Sensibilidad" = "orangered2", "Especificidad" = "gray50")) +
+  geom_text(color = "white", size = 3) +
+  scale_y_continuous(limits = c(0, 1)) +
+  coord_flip() +
+  labs(title = "Sensibilidad y Especificidad - 70/30", 
+       x = "Modelos", 
+       y = "Valor") +
+  theme_bw() + 
+  theme(legend.position = "top", legend.title = element_blank()) # Ocultar el título de la leyenda
+
+dev.off()
+
+```
 
 
 
